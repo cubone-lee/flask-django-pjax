@@ -1,0 +1,23 @@
+<h2>
+    {% if 'X-Pjax' in request.headers %}
+        <a href="{% url 'index' %}" data-pjax="index">Back To List</a>
+    {% else %}
+        <a href="{% url 'index' %}">Back To List</a>
+    {% endif %}
+</h2>
+<h2>ITEM {{ item_id }} DETAIL WITH PJAX</h2>
+<div id="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Currency</th>
+        </tr>
+
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.currency }}</td>
+        </tr>
+    </table>
+</div>

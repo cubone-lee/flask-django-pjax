@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PJAX DJANGO DEMO</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'pjax/js/jquery.pjax.js' %}"></script>
+    <style type="text/css">
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pjax-container">
+        {% include 'partial/list.html' %}
+    </div>
+
+    <script type="text/javascript">
+        if ($.support.pjax) {
+            let options = {
+                type: 'GET'
+            };
+
+            $(document).pjax('a[data-pjax]', '#pjax-container', options);
+        }
+    </script>
+</body>
+</html>
