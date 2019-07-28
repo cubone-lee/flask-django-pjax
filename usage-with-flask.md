@@ -336,6 +336,6 @@ Trong bài viết này mình đã hướng dẫn các bạn sử dụng pjax v�
 
 Cám ơn các bạn đã quan tâm.
 
-Các bạn có thể xem đầy đủ source code tại [đây](https://github.com/cubone-lee/flask-django-pjax).
+Các bạn có thể xem đầy đủ source code tại [đây](https://github.com/cubone-lee/flask-django-pjax/tree/master/pjax_flask).
 
 Lê Đức Trí.
