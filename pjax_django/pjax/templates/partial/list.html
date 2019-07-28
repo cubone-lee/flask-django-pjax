@@ -1,26 +1,24 @@
-<div id="container">
-    <h2>PJAX DJANGO DEMO</h2>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Currency</th>
-            <th>PJAX</th>
-            <th>WITHOUT PJAX</th>
-        </tr>
+<h2>PJAX DJANGO DEMO</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Currency</th>
+        <th>PJAX</th>
+        <th>WITHOUT PJAX</th>
+    </tr>
 
-        {% for id, item in items.items %}
-            <tr>
-                <td>{{ item.name }}</td>
-                <td>{{ item.price }}</td>
-                <td>{{ item.currency }}</td>
-                <td>
-                    <a href="{% url 'item' item_id=id %}" data-pjax="detail">view</a>
-                </td>
-                <td>
-                    <a href="{% url 'item' item_id=id %}">view</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-</div>
+    {% for id, item in items.items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.currency }}</td>
+            <td>
+                <a href="{% url 'item' item_id=id %}" data-pjax="detail">view</a>
+            </td>
+            <td>
+                <a href="{% url 'item' item_id=id %}">view</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
